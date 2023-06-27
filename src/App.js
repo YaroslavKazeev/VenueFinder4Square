@@ -35,7 +35,7 @@ class App extends Component {
       ll: this.state.latlong,
       // open_now: 'true',
       query: query,
-      // sort: 'DISTANCE'
+      sort: 'DISTANCE'
     });
   
     console.log(this.state.latlong);
