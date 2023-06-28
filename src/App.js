@@ -62,10 +62,15 @@ class App extends Component {
       })
   }
 
+  formSubmited = (event, query) => {
+    event.preventDefault();
+    this.getVenues(query)
+  }
+
   render() {console.log(this.state.venues);
     return (
       <div className="App">
-      <Search getVenues={this.getVenues} />
+      <Search formSubmited={this.formSubmited} />
       <p>Hey!</p>
       <ul>
       {this.state.venues.map(venue=>{
